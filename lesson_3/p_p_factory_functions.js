@@ -90,3 +90,24 @@ function createInvoice(services = {}) {
     },
   };
 } 
+
+
+function Cat(name, age, color) {
+  this.name = name;
+  this.age = age;
+  this.color = color
+}
+
+function createCat(name, age) {
+  return {
+    name,
+    age,
+  }
+}
+
+let cat2 = createCat('bob', 2);
+let cat = new Cat('Leon', 2, 'White');
+console.log(cat);
+console.log(cat instanceof Object);  // false
+console.log(cat instanceof Cat); // true
+console.log(cat2 instanceof createCat); // false
